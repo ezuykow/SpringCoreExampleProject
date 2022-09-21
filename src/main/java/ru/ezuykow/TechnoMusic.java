@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
 public class TechnoMusic implements Music{
     private static List<String> songsList = new ArrayList<>();
 
