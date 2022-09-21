@@ -19,10 +19,21 @@ public class MusicPlayer {
         this.technoMusic = technoMusic;
     }
 
-    public String playMusic() {
-        return ("Playing " +
-                classicalMusic.getSong() + " " +
-                rockMusic.getSong() + " " +
-                technoMusic.getSong());
+    public String playMusic(MusicGenre genre) {
+        String s;
+        switch (genre) {
+            case CLASSICAL:
+                s = classicalMusic.getSong();
+                break;
+            case ROCK:
+                s = rockMusic.getSong();
+                break;
+            case TECHNO:
+                s = technoMusic.getSong();
+                break;
+            default:
+                s = "There are no this music.";
+        }
+        return s;
     }
 }
